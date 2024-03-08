@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>(Des)Cifrar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">(Des)Cifrar</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="#banner">Home</a></li>
+								<li><a href="#wrapper">(De)codificar</a></li>
+								<li><a href="#one">Sobre as cifras</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><img class="icon" src="images/lock.png" alt=""></div>
+							<h2>(Des)Cifrar</h2>
+							<p>Criptografe e Descriptografe suas mensagens</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+				<section id="wrapper">
+				<!-- Content -->
+					<div class="wrapper">
+						<div class="inner">
+				<!-- Mensagem -->	
+							<section id="form">
+								<form id="cifraForm" method="post" action="#">
+										<label for="textoOriginal">Texto Original:</label>
+										<textarea id="textoOriginal" name="textoOriginal" rows="4" required></textarea>
+										<br>
+										<label for="deslocamento">Deslocamento:</label>
+										<input type="number" id="deslocamento" name="deslocamento" min="1" value="3" required>
+									<br>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Criptografar"></li>
+											<li><input type="submit" value="Descriptografar"></li>
+										</ul>
+									</div>
+									<br>
+									<label for="resultado">Resultado:</label>
+									<textarea id="resultado" name="resultado" rows="4" readonly></textarea>
+								</div>
+								</form>
+							</section>
+						</div>
+					</div>
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<div class="content">
+										<h2 class="major">Cifra de César</h2>
+										<p>A Cifra de César é um método de criptografia simples em que cada letra do texto original é substituída por outra letra, deslocada por um número fixo de posições no alfabeto. O nome da cifra é uma homenagem a Júlio César, que supostamente a utilizava para se comunicar com seus generais. O deslocamento é feito por um valor fixo (por exemplo, 3 posições), e a decifração é realizada aplicando o deslocamento negativo. Embora seja uma técnica básica, ainda é relevante para entender os princípios da criptografia.</div>
+								</div>
+							</section>
+
+				</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<p>Pode acompanhar meu trabalho em outras redes:</p>
+							<ul class="contact">
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/mgpas/">LinkedIn</a></li>
+								<li class="icon brands fa-github"><a href="https://github.com/mgpas">Github</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Made with ♡ by mgpas. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/criptografar.js"></script>
+
+	</body>
+</html>
