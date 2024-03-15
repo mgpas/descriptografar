@@ -4,11 +4,13 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="pt-BR">
 	<head>
 		<title>(Des)Cifrar</title>
+		<meta name="description" content="Um local para criptografar e descriptografar suas mensagens.">
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preload" as="image" imagesrcset="./images/bg.webp">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -21,7 +23,11 @@
 					<header id="header" class="alt">
 						<h1><a href="index.html">(Des)Cifrar</a></h1>
 						<nav>
-							<a href="#menu">Menu</a>
+							<ul class="contact">
+								<li><a class="icon brands fa-linkedin" aria-label="Veja meu linkedin" href="https://www.linkedin.com/in/mgpas/"></a></li>
+								<li><a class="icon brands fa-github" aria-label="Veja meu github" href="https://github.com/mgpas"></a></li>							
+							</ul>
+							<a aria-label="Abrir o menu" href="#menu">Menu</a>
 						</nav>
 					</header>
 
@@ -30,18 +36,17 @@
 						<div class="inner">
 							<h2>Menu</h2>
 							<ul class="links">
-								<li><a href="#banner">Home</a></li>
-								<li><a href="#wrapper">(De)codificar</a></li>
-								<li><a href="#one">Sobre as cifras</a></li>
+								<li><a aria-label="Ir para a página inicial" href="index.html">Página inicial</a></li>
+								<li><a aria-label="Ir para a página sobre as cifras" href="about.html">Sobre as cifras</a></li>
 							</ul>
-							<a href="#" class="close">Close</a>
+							<a aria-label="Fechar o menu" href="#" class="close">Fechar</a>
 						</div>
 					</nav>
 
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<div class="logo"><img class="icon" src="images/lock.png" alt=""></div>
+							<div class="logo"><img class="icon" src="images/lock.webp" alt=""></div>
 							<h2>(Des)Cifrar</h2>
 							<p>Criptografe e Descriptografe suas mensagens</p>
 						</div>
@@ -76,25 +81,11 @@
 						</div>
 					</div>
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<div class="content">
-										<h2 class="major">Cifra de César</h2>
-										<p>A Cifra de César é um método de criptografia simples em que cada letra do texto original é substituída por outra letra, deslocada por um número fixo de posições no alfabeto. O nome da cifra é uma homenagem a Júlio César, que supostamente a utilizava para se comunicar com seus generais. O deslocamento é feito por um valor fixo (por exemplo, 3 posições), e a decifração é realizada aplicando o deslocamento negativo. Embora seja uma técnica básica, ainda é relevante para entender os princípios da criptografia.</div>
-								</div>
-							</section>
-
 				</section>
 
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
-							<p>Pode acompanhar meu trabalho em outras redes:</p>
-							<ul class="contact">
-								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/mgpas/">LinkedIn</a></li>
-								<li class="icon brands fa-github"><a href="https://github.com/mgpas">Github</a></li>
-							</ul>
 							<ul class="copyright">
 								<li>&copy; Made with ♡ by mgpas. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>

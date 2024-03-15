@@ -100,7 +100,7 @@ input, select, textarea, #deslocamento {
 
 	body {
 		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.webp");
+		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), image-set(url("../../images/bg.webp"));
 		background-size: auto,
  cover;
 		background-attachment: fixed,
@@ -119,8 +119,6 @@ input, select, textarea, #deslocamento {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
-
-/* Type */
 
 	body, input, select, textarea, #deslocamento {
 		color: #ffffff;
@@ -372,6 +370,136 @@ input, select, textarea, #deslocamento {
 	.align-right {
 		text-align: right;
 	}
+
+/* Banner */
+
+#banner {
+	padding: 10em 0 4.75em 0 ;
+}
+
+	#banner .inner {
+		margin: 0 auto;
+		width: 55em;
+	}
+
+	#banner .logo {
+		transform: translateY(0);
+		opacity: 1;
+		margin: 0 0 1.3em 0;
+	}
+
+		#banner .logo .icon {
+			cursor: default;
+			display: inline-block;
+			font-size: 2em;
+			height: 2.5em;
+			line-height: 2.5em;
+			width: 2.5em;
+		}
+
+	#banner h2 {
+		filter: blur(0);
+		opacity: 1;
+		border-bottom: solid 2px rgba(0, 212, 152, 0.125);
+		font-size: 2.25em;
+		margin-bottom: 0.8em;
+		padding-bottom: 0.4em;
+	}
+
+	#banner p {
+		filter: blur(0);
+		opacity: 1;
+		font-family: Raleway, Helvetica, sans-serif;
+		font-size: 1em;
+		font-weight: 200;
+		letter-spacing: 0.1em;
+		line-height: 2;
+	}
+
+	@media screen and (max-width: 1280px) {
+
+		#banner {
+			padding: 7em 0 8.25em 0 ;
+			background-color: #2e3141;
+			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.webp");
+			background-size: auto,
+cover;
+			background-position: center,
+center;
+			margin-bottom: -6.5em;
+		}
+
+	}
+
+	@media screen and (max-width: 980px) {
+
+		#banner {
+			padding: 12em 3em 12.375em 3em ;
+			margin-bottom: -4.75em;
+		}
+
+			#banner .inner {
+				width: 100%;
+			}
+
+	}
+
+	@media screen and (max-width: 736px) {
+
+		#banner {
+			padding: 5em 2em 4.25em 2em ;
+			margin-bottom: -2.5em;
+		}
+
+			#banner .logo {
+				margin: 0 0 1em 0;
+			}
+
+				#banner .logo .icon {
+					font-size: 1.5em;
+				}
+
+			#banner h2 {
+				font-size: 1.5em;
+			}
+
+			#banner p {
+				font-size: 0.8em;
+			}
+
+	}
+
+	body.is-preload #banner .logo {
+		-moz-transform: translateY(0.5em);
+		-webkit-transform: translateY(0.5em);
+		-ms-transform: translateY(0.5em);
+		transform: translateY(0.5em);
+		opacity: 0;
+	}
+
+	body.is-preload #banner h2 {
+		opacity: 0;
+		-moz-transform: translateX(0.25em);
+		-webkit-transform: translateX(0.25em);
+		-ms-transform: translateX(0.25em);
+		transform: translateX(0.25em);
+		-moz-filter: blur(2px);
+		-webkit-filter: blur(2px);
+		-ms-filter: blur(2px);
+		filter: blur(2px);
+	}
+
+	body.is-preload #banner p {
+		opacity: 0;
+		-moz-transform: translateX(0.5em);
+		-webkit-transform: translateX(0.5em);
+		-ms-transform: translateX(0.5em);
+		transform: translateX(0.5em);
+		-moz-filter: blur(2px);
+		-webkit-filter: blur(2px);
+		-ms-filter: blur(2px);
+		filter: blur(2px);
+	}	
 
 /* Row */
 
@@ -2355,27 +2483,6 @@ input, select, textarea, #deslocamento {
 		opacity: 1.0;
 	}
 
-/* Box */
-
-	.box {
-		border-radius: 5px;
-		border: solid 2px rgba(255, 255, 255, 0.125);
-		margin-bottom: 2em;
-		padding: 1.5em;
-	}
-
-		.box > :last-child,
-		.box > :last-child > :last-child,
-		.box > :last-child > :last-child > :last-child {
-			margin-bottom: 0;
-		}
-
-		.box.alt {
-			border: 0;
-			border-radius: 0;
-			padding: 0;
-		}
-
 /* Icon */
 
 	.icon {
@@ -2411,7 +2518,10 @@ input, select, textarea, #deslocamento {
 
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
+			font-size: 1.8em;
 		}
+		
+		
 
 /* Image */
 
@@ -2666,13 +2776,18 @@ input, select, textarea, #deslocamento {
 	ul.contact {
 		list-style: none;
 		padding: 0;
+		display: flex;
+		flex-direction: row;
+    	align-items: baseline;
+		align-self: center;
+		margin: 0;
 	}
 
 		ul.contact li {
 			text-decoration: none;
-			margin: 2.5em 0 0 0;
-			padding: 0 0 0 3.25em;
+			padding: 0.50em;
 			position: relative;
+			margin-top: 0;
 		}
 
 			ul.contact li:before {
@@ -2696,161 +2811,19 @@ input, select, textarea, #deslocamento {
 				height: 2.5em;
 				left: 0;
 				line-height: 2.35em;
-				position: absolute;
+				/* position: absolute; */
 				text-align: center;
 				top: 0;
 				width: 2.5em;
 			}
 
-			ul.contact li:first-child {
-				margin-top: 0;
-			}
-
 		@media screen and (max-width: 736px) {
 
 			ul.contact li {
-				margin: 1.5em 0 0 0;
+				margin: 1.75em 0 0 0;
 			}
 
 		}
-
-/* Pagination */
-
-	ul.pagination {
-		cursor: default;
-		list-style: none;
-		padding-left: 0;
-	}
-
-		ul.pagination li {
-			display: inline-block;
-			padding-left: 0;
-			vertical-align: middle;
-		}
-
-			ul.pagination li > .page {
-				-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-				-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-				-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-				transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-				border-bottom: 0;
-				border-radius: 5px;
-				display: inline-block;
-				height: 1.5em;
-				line-height: 1.5em;
-				margin: 0 0.125em;
-				min-width: 1.5em;
-				padding: 0 0.5em;
-				text-align: center;
-			}
-
-				ul.pagination li > .page:hover {
-					background-color: rgba(255, 255, 255, 0.025);
-				}
-
-				ul.pagination li > .page.active {
-					background-color: #4c5c96;
-				}
-
-			ul.pagination li:first-child {
-				padding-right: 0.75em;
-			}
-
-			ul.pagination li:last-child {
-				padding-left: 0.75em;
-			}
-
-		@media screen and (max-width: 480px) {
-
-			ul.pagination li:nth-child(n+2):nth-last-child(n+2) {
-				display: none;
-			}
-
-			ul.pagination li .button {
-				width: 100%;
-			}
-
-			ul.pagination li:first-child {
-				width: calc(50% - 2px);
-				text-align: left;
-				padding-right: 0.325em;
-			}
-
-			ul.pagination li:last-child {
-				width: calc(50% - 2px);
-				text-align: right;
-				padding-left: 0.325em;
-			}
-
-		}
-
-/* Table */
-
-	.table-wrapper {
-		-webkit-overflow-scrolling: touch;
-		overflow-x: auto;
-	}
-
-	table {
-		margin: 0 0 2em 0;
-		width: 100%;
-	}
-
-		table tbody tr {
-			border: solid 1px rgba(255, 255, 255, 0.125);
-			border-left: 0;
-			border-right: 0;
-		}
-
-			table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(255, 255, 255, 0.025);
-			}
-
-		table td {
-			padding: 0.75em 0.75em;
-		}
-
-		table th {
-			color: #ffffff;
-			font-size: 0.9em;
-			font-weight: 600;
-			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
-		}
-
-		table thead {
-			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-		}
-
-		table tfoot {
-			border-top: solid 2px rgba(255, 255, 255, 0.125);
-		}
-
-		table.alt {
-			border-collapse: separate;
-		}
-
-			table.alt tbody tr td {
-				border: solid 1px rgba(255, 255, 255, 0.125);
-				border-left-width: 0;
-				border-top-width: 0;
-			}
-
-				table.alt tbody tr td:first-child {
-					border-left-width: 1px;
-				}
-
-			table.alt tbody tr:first-child td {
-				border-top-width: 1px;
-			}
-
-			table.alt thead {
-				border-bottom: 0;
-			}
-
-			table.alt tfoot {
-				border-top: 0;
-			}
 
 /* Button */
 
@@ -3116,12 +3089,15 @@ input, select, textarea, #deslocamento {
 			position: absolute;
 			right: 0.7em;
 			top: 0.7em;
+			display: flex;
+			flex-direction: row;
 		}
 
 			#header nav a {
 				border: 0;
 				display: inline-block;
 				padding: 0 1em;
+				align-self: center;
 			}
 
 				#header nav a:before {
@@ -3138,6 +3114,7 @@ input, select, textarea, #deslocamento {
 					border-radius: 5px;
 					box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
 					padding: 0 1.35em;
+					align-self: center;
 				}
 
 					#header nav a[href="#menu"]:before {
@@ -3374,175 +3351,6 @@ input, select, textarea, #deslocamento {
 			-ms-transform: translateY(0);
 			transform: translateY(0);
 			opacity: 1;
-		}
-
-/* Banner */
-
-	#banner {
-		padding: 10em 0 4.75em 0 ;
-	}
-
-		#banner .inner {
-			margin: 0 auto;
-			width: 55em;
-		}
-
-		#banner .logo {
-			-moz-transition: opacity 2s ease, -moz-transform 1s ease;
-			-webkit-transition: opacity 2s ease, -webkit-transform 1s ease;
-			-ms-transition: opacity 2s ease, -ms-transform 1s ease;
-			transition: opacity 2s ease, transform 1s ease;
-			-moz-transform: translateY(0);
-			-webkit-transform: translateY(0);
-			-ms-transform: translateY(0);
-			transform: translateY(0);
-			opacity: 1;
-			margin: 0 0 1.3em 0;
-		}
-
-			#banner .logo .icon {
-				border-radius: 100%;
-				cursor: default;
-				display: inline-block;
-				font-size: 2em;
-				height: 2.25em;
-				line-height: 2.25em;
-				text-align: center;
-				width: 2.25em;
-			}
-
-		#banner h2 {
-			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, -moz-filter 0.25s ease;
-			-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease, -webkit-filter 0.25s ease;
-			-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease, -ms-filter 0.25s ease;
-			transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
-			-moz-transform: translateX(0);
-			-webkit-transform: translateX(0);
-			-ms-transform: translateX(0);
-			transform: translateX(0);
-			-moz-transition-delay: 0.65s;
-			-webkit-transition-delay: 0.65s;
-			-ms-transition-delay: 0.65s;
-			transition-delay: 0.65s;
-			-moz-filter: blur(0);
-			-webkit-filter: blur(0);
-			-ms-filter: blur(0);
-			filter: blur(0);
-			opacity: 1;
-			border-bottom: solid 2px rgba(0, 212, 152, 0.125);
-			font-size: 2.25em;
-			margin-bottom: 0.8em;
-			padding-bottom: 0.4em;
-		}
-
-		#banner p {
-			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, -moz-filter 0.25s ease;
-			-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease, -webkit-filter 0.25s ease;
-			-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease, -ms-filter 0.25s ease;
-			transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
-			-moz-transform: translateX(0);
-			-webkit-transform: translateX(0);
-			-ms-transform: translateX(0);
-			transform: translateX(0);
-			-moz-transition-delay: 0.8s;
-			-webkit-transition-delay: 0.8s;
-			-ms-transition-delay: 0.8s;
-			transition-delay: 0.8s;
-			-moz-filter: blur(0);
-			-webkit-filter: blur(0);
-			-ms-filter: blur(0);
-			filter: blur(0);
-			opacity: 1;
-			font-family: Raleway, Helvetica, sans-serif;
-			font-size: 1em;
-			font-weight: 200;
-			letter-spacing: 0.1em;
-			line-height: 2;
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			#banner {
-				padding: 7em 0 8.25em 0 ;
-				background-color: #2e3141;
-				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-				background-size: auto,
- cover;
-				background-position: center,
- center;
-				margin-bottom: -6.5em;
-			}
-
-		}
-
-		@media screen and (max-width: 980px) {
-
-			#banner {
-				padding: 12em 3em 12.375em 3em ;
-				margin-bottom: -4.75em;
-			}
-
-				#banner .inner {
-					width: 100%;
-				}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#banner {
-				padding: 5em 2em 4.25em 2em ;
-				margin-bottom: -2.5em;
-			}
-
-				#banner .logo {
-					margin: 0 0 1em 0;
-				}
-
-					#banner .logo .icon {
-						font-size: 1.5em;
-					}
-
-				#banner h2 {
-					font-size: 1.5em;
-				}
-
-				#banner p {
-					font-size: 0.8em;
-				}
-
-		}
-
-		body.is-preload #banner .logo {
-			-moz-transform: translateY(0.5em);
-			-webkit-transform: translateY(0.5em);
-			-ms-transform: translateY(0.5em);
-			transform: translateY(0.5em);
-			opacity: 0;
-		}
-
-		body.is-preload #banner h2 {
-			opacity: 0;
-			-moz-transform: translateX(0.25em);
-			-webkit-transform: translateX(0.25em);
-			-ms-transform: translateX(0.25em);
-			transform: translateX(0.25em);
-			-moz-filter: blur(2px);
-			-webkit-filter: blur(2px);
-			-ms-filter: blur(2px);
-			filter: blur(2px);
-		}
-
-		body.is-preload #banner p {
-			opacity: 0;
-			-moz-transform: translateX(0.5em);
-			-webkit-transform: translateX(0.5em);
-			-ms-transform: translateX(0.5em);
-			transform: translateX(0.5em);
-			-moz-filter: blur(2px);
-			-webkit-filter: blur(2px);
-			-ms-filter: blur(2px);
-			filter: blur(2px);
 		}
 
 /* Wrapper */
