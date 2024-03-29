@@ -1,0 +1,43 @@
+{
+  "background_color": "#2e3141",
+  "description": "Um local para criptografar e descriptografar suas mensagens.",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "(Des)cifrar",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "Descifrar",
+  "theme_color": "#b5e1d8",
+  "start_url": "index.html",
+  "icons": [
+    {
+      "src": "assets/icons/48.png",
+      "type": "image/png", "sizes": "48x48"
+    },
+    {
+      "src": "assets/icons/72.png",
+      "type": "image/png", "sizes": "72x72"
+    },
+    {
+      "src": "assets/icons/96.png",
+      "type": "image/png", "sizes": "96x96"
+    },
+    {
+      "src": "assets/icons/128.png",
+      "type": "image/png", "sizes": "128x128"
+    },
+    {
+      "src": "assets/icons/192.png",
+      "type": "image/png", "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/384.png",
+      "type": "image/png", "sizes": "384x384"
+    },
+    {
+      "src": "assets/icons/512.png",
+      "type": "image/png", "sizes": "512x512"
+    }
+  ]
+}
